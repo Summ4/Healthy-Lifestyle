@@ -6,13 +6,97 @@
     android:layout_height="match_parent">
 
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Button"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <TableLayout
+        android:id="@+id/tableLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TableRow
+            android:layout_width="416dp"
+            android:layout_height="wrap_content"
+            android:padding="6dip"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints">
+
+            <ImageView
+                android:id="@+id/BODYPART_LOGO"
+                android:layout_width="45dp"
+                android:layout_height="fill_parent"
+                android:layout_marginEnd="6dip"
+                android:background="@drawable/web_hi_res_512"
+                android:scaleType="centerInside" />
+
+            <TextView
+                android:layout_width="280dp"
+                android:layout_height="match_parent"
+                android:hint="Insert "
+                android:textAlignment="center"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/buttonAdd"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="1dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="1dp"
+                android:background="@drawable/round_button"
+                android:gravity="center_vertical|center"
+                android:scaleType="center"
+                android:text="+"
+                android:textSize="30sp"
+                tools:ignore="HardcodedText" />
+
+        </TableRow>
+
+
+        <TableRow
+            android:layout_width="416dp"
+            android:layout_height="wrap_content"
+            android:padding="6dip"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints">
+
+            <ImageView
+                android:id="@+id/push_ups_logo"
+                android:layout_width="45dp"
+                android:layout_height="fill_parent"
+                android:layout_marginEnd="6dip"
+                android:background="@drawable/web_hi_res_512"
+                android:scaleType="centerInside" />
+
+            <TextView
+                android:layout_width="280dp"
+                android:layout_height="match_parent"
+                android:hint="Insert "
+                android:textAlignment="center"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/buttonAdd"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="1dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="1dp"
+                android:background="@drawable/round_button"
+                android:gravity="center_vertical|center"
+                android:scaleType="center"
+                android:text="+"
+                android:textSize="30sp"
+                tools:ignore="DuplicateIds,HardcodedText" />
+
+        </TableRow>
+
+    </TableLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

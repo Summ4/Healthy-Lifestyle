@@ -35,7 +35,6 @@ class SettingsFragment : Fragment(){
     }
 
 
-
     private fun init() {
 
         emailTextView = ourView.findViewById(R.id.emailAdress)
@@ -55,7 +54,6 @@ class SettingsFragment : Fragment(){
             startActivity( Intent(activity, LoginActivity::class.java))
             mAuth.signOut()
 
-//            finish()
         }
 
     }

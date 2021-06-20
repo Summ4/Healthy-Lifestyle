@@ -22,13 +22,12 @@ class MainActivity : AppCompatActivity() {
     private lateinit var viewPager : ViewPager2
 
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
         var list = arrayListOf(userInputFragment, settingsFragment)
-        viewPager = findViewById<ViewPager2>(R.id.viewPager)
+        viewPager = findViewById(R.id.viewPager)
 
         var navView = findViewById<BottomNavigationView>(R.id.nav_view)
 
