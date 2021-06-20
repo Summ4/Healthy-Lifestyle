@@ -24,9 +24,9 @@ class LoginActivity : AppCompatActivity() {
 
         mAuth = FirebaseAuth.getInstance()
 
-        if (mAuth.currentUser != null) {
-            goToMainActivity()
-        }
+//        if (mAuth.currentUser != null) {
+//            goToMainActivity()
+//        }
 
         setContentView(R.layout.activity_login)
 
