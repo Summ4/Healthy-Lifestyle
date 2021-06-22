@@ -3,18 +3,22 @@ package d.vardanidze.healthylifestyle
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
+import android.view.View
 import android.widget.Button
+import androidx.recyclerview.widget.RecyclerView
 import androidx.viewpager2.widget.ViewPager2
 import com.google.android.material.bottomnavigation.BottomNavigationItemView
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.navigation.NavigationView
 import d.vardanidze.healthylifestyle.fragments.SettingsFragment
+import d.vardanidze.healthylifestyle.fragments.StatisticFragment
 import d.vardanidze.healthylifestyle.fragments.UserInputFragment
 
 class MainActivity : AppCompatActivity() {
 
     private var userInputFragment = UserInputFragment()
     private var settingsFragment = SettingsFragment()
+    private var statisticFragment = StatisticFragment()
 
     private lateinit var homeButton: MenuItem
     private lateinit var settingButton: MenuItem
@@ -26,7 +30,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        var list = arrayListOf(userInputFragment, settingsFragment)
+        var list = arrayListOf(userInputFragment, statisticFragment, settingsFragment)
         viewPager = findViewById(R.id.viewPager)
 
         var navView = findViewById<BottomNavigationView>(R.id.nav_view)
@@ -45,9 +49,13 @@ class MainActivity : AppCompatActivity() {
     fun homeClicked(item: MenuItem) {
         viewPager.setCurrentItem(0,true)
     }
-
-    fun settingsClicked(item: MenuItem) {
+    fun statisticClicked(item: MenuItem) {
         viewPager.setCurrentItem(1,true)
     }
+
+    fun settingsClicked(item: MenuItem) {
+        viewPager.setCurrentItem(2,true)
+    }
+
 
 }

@@ -8,6 +8,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.ImageView
+import android.widget.RelativeLayout
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
@@ -21,6 +23,9 @@ class SettingsFragment : Fragment(){
     private lateinit var passwordChangeButton: Button
     private lateinit var logoutButton: Button
     private lateinit var ourView : View
+    private lateinit var headerLayout : RelativeLayout
+    private lateinit var header_icon : ImageView
+
     private lateinit var mAuth: FirebaseAuth
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
@@ -37,9 +42,12 @@ class SettingsFragment : Fragment(){
 
     private fun init() {
 
-        emailTextView = ourView.findViewById(R.id.emailAdress)
+        emailTextView = ourView.findViewById(R.id.userEmail)
         passwordChangeButton = ourView.findViewById(R.id.passwordChangeButton)
         logoutButton = ourView.findViewById(R.id.logoutButton)
+        headerLayout = ourView.findViewById(R.id.headerLayout)
+        header_icon = ourView.findViewById(R.id.header_icon)
+
         emailTextView.text = mAuth.currentUser?.email
 
     }

@@ -5,98 +5,52 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-
-    <TableLayout
-        android:id="@+id/tableLayout"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toBottomOf="@+id/workNameTextView" />
 
-        <TableRow
-            android:layout_width="416dp"
-            android:layout_height="wrap_content"
-            android:padding="6dip"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:ignore="MissingConstraints">
+    <EditText
+        android:id="@+id/workNameTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="70dp"
+        android:ems="10"
+        android:hint="Workout"
+        android:inputType="textPersonName"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-            <ImageView
-                android:id="@+id/BODYPART_LOGO"
-                android:layout_width="45dp"
-                android:layout_height="fill_parent"
-                android:layout_marginEnd="6dip"
-                android:background="@drawable/web_hi_res_512"
-                android:scaleType="centerInside" />
+    <EditText
+        android:id="@+id/quantityTextView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="12dp"
+        android:ems="10"
+        android:hint="Quantity"
+        android:inputType="textPersonName"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/workNameTextView"
+        app:layout_constraintEnd_toStartOf="@+id/addButton"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/workNameTextView"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
-            <TextView
-                android:layout_width="280dp"
-                android:layout_height="match_parent"
-                android:hint="Insert "
-                android:textAlignment="center"
-                android:textSize="20sp" />
-
-            <TextView
-                android:id="@+id/buttonAdd"
-                android:layout_width="60dp"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="5dp"
-                android:layout_marginTop="1dp"
-                android:layout_marginRight="5dp"
-                android:layout_marginBottom="1dp"
-                android:background="@drawable/round_button"
-                android:gravity="center_vertical|center"
-                android:scaleType="center"
-                android:text="+"
-                android:textSize="30sp"
-                tools:ignore="HardcodedText" />
-
-        </TableRow>
-
-
-        <TableRow
-            android:layout_width="416dp"
-            android:layout_height="wrap_content"
-            android:padding="6dip"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:ignore="MissingConstraints">
-
-            <ImageView
-                android:id="@+id/push_ups_logo"
-                android:layout_width="45dp"
-                android:layout_height="fill_parent"
-                android:layout_marginEnd="6dip"
-                android:background="@drawable/web_hi_res_512"
-                android:scaleType="centerInside" />
-
-            <TextView
-                android:layout_width="280dp"
-                android:layout_height="match_parent"
-                android:hint="Insert "
-                android:textAlignment="center"
-                android:textSize="20sp" />
-
-            <TextView
-                android:id="@+id/buttonAdd"
-                android:layout_width="60dp"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="5dp"
-                android:layout_marginTop="1dp"
-                android:layout_marginRight="5dp"
-                android:layout_marginBottom="1dp"
-                android:background="@drawable/round_button"
-                android:gravity="center_vertical|center"
-                android:scaleType="center"
-                android:text="+"
-                android:textSize="30sp"
-                tools:ignore="DuplicateIds,HardcodedText" />
-
-        </TableRow>
-
-    </TableLayout>
-
+    <Button
+        android:id="@+id/addButton"
+        android:layout_width="50dp"
+        android:layout_height="0dp"
+        android:text="+"
+        android:onClick="onPlusClicked"
+        app:layout_constraintBottom_toBottomOf="@+id/quantityTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
