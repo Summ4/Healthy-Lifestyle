@@ -37,6 +37,9 @@ class RecyclerViewAdapter(private val list: List<ViewItem>) :
     override fun onBindViewHolder(holder: RecyclerViewHolder, position: Int) {
         holder.workoutNameTextView.setText(list[position].workout)
         holder.quantityTextView.setText(list[position].quantity.toString())
+        
+        holder.workoutNameTextView.setFocusable(false)
+        holder.quantityTextView.setFocusable(false)
 
         holder.workoutNameTextView.setOnClickListener{
             // update database
