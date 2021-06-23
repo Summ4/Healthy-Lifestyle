@@ -3,10 +3,7 @@ package d.vardanidze.healthylifestyle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
 import android.widget.EditText
-import android.widget.ImageView
-import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
 
@@ -37,9 +34,10 @@ class RecyclerViewAdapter(private val list: List<ViewItem>) :
     override fun onBindViewHolder(holder: RecyclerViewHolder, position: Int) {
         holder.workoutNameTextView.setText(list[position].workout)
         holder.quantityTextView.setText(list[position].quantity.toString())
-        
+
         holder.workoutNameTextView.setFocusable(false)
         holder.quantityTextView.setFocusable(false)
+
 
         holder.workoutNameTextView.setOnClickListener{
             // update database

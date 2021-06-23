@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/fitness"
+    android:background="@drawable/run"
     tools:context=".RegisterActivity">
 
     <LinearLayout
@@ -24,6 +24,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Email"
+            android:textColorHint="#EBC5F1"
+            android:textColor="#EBC5F1"
             android:inputType="textEmailAddress" />
 
         <EditText
@@ -31,6 +33,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Password"
+            android:textSize="18sp"
+            android:textColorHint="#EBC5F1"
+            android:textColor="#EBC5F1"
             android:inputType="textPassword" />
 
         <Button

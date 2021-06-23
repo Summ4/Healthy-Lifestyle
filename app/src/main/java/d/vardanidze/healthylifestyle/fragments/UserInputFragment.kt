@@ -6,10 +6,11 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.EditText
-import android.widget.LinearLayout
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.RecyclerView
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.database.DatabaseReference
+import com.google.firebase.database.FirebaseDatabase
 import d.vardanidze.healthylifestyle.R
 import d.vardanidze.healthylifestyle.RecyclerViewAdapter
 import d.vardanidze.healthylifestyle.ViewItem
@@ -18,6 +19,7 @@ class UserInputFragment : Fragment() {
 
     private lateinit var ourView : View
     private lateinit var mAuth: FirebaseAuth
+    private lateinit var db: DatabaseReference
     private lateinit var rv: RecyclerView
     private lateinit var list: List<ViewItem>
 
@@ -30,6 +32,7 @@ class UserInputFragment : Fragment() {
         ourView =  inflater.inflate(R.layout.user_input, container, false)
 
         mAuth = FirebaseAuth.getInstance()
+        db = FirebaseDatabase.getInstance().getReference("UserInfo")
 
         plusButton = ourView.findViewById(R.id.addButton)
         workoutEditText = ourView.findViewById(R.id.workNameTextView)
@@ -49,12 +52,20 @@ class UserInputFragment : Fragment() {
         plusButton.setOnClickListener{
            val workout = workoutEditText.text.toString()
            val quantity = quantityEditText.text.toString().toInt()
+
+
+            val abt = ViewItem(workout,quantity)
+            db.child(mAuth.currentUser?.uid.toString()).setValue(abt)
+
+
             workoutEditText.setText("")
             quantityEditText.setText("")
 
+
             // add new item in list
             // update adapter
-           rv.adapter = RecyclerViewAdapter(listOf(ViewItem(workout, quantity)))
+
+           rv.adapter = RecyclerViewAdapter(listOf(ViewItem(workout,quantity)))
         }
 
     }

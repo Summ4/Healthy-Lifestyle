@@ -7,6 +7,8 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.database.DatabaseReference
+import com.google.firebase.database.FirebaseDatabase
 
 class RegisterActivity : AppCompatActivity() {
     private lateinit var emailEditText: EditText
@@ -14,11 +16,13 @@ class RegisterActivity : AppCompatActivity() {
     private lateinit var registerButton: Button
 
     private lateinit var mAuth: FirebaseAuth
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_register)
-        mAuth = FirebaseAuth.getInstance()
 
+        mAuth = FirebaseAuth.getInstance()
         this.init()
 
         this.registerListeners()
