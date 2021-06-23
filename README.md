@@ -29,13 +29,13 @@ An easy way to keep track of your progress
 
 *Free and Open-Source*
 <p float="left">
-  <img src="https://user-images.githubusercontent.com/74433356/123086772-e2990880-d434-11eb-86b3-5e25ef5d4ab5.png" width="450" height="900"> 
+  <img src="https://user-images.githubusercontent.com/74433356/123086772-e2990880-d434-11eb-86b3-5e25ef5d4ab5.png" width="340" height="650"> 
    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-  <img src="https://user-images.githubusercontent.com/74433356/123087572-c2b61480-d435-11eb-9a59-9c369d713dd2.png" width="450" height="900">
+  <img src="https://user-images.githubusercontent.com/74433356/123087572-c2b61480-d435-11eb-9a59-9c369d713dd2.png" width="340" height="650">
 </p>
 <p float="left">
-  <img src="https://user-images.githubusercontent.com/74433356/123088212-8505bb80-d436-11eb-973b-f615016c6df1.png" width="450" height="900"> 
+  <img src="https://user-images.githubusercontent.com/74433356/123088212-8505bb80-d436-11eb-973b-f615016c6df1.png" width="340" height="650"> 
   &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
-  <img src="https://user-images.githubusercontent.com/74433356/123088320-a23a8a00-d436-11eb-9dd6-b9b55674790f.png" width="450" height="900"> 
+  <img src="https://user-images.githubusercontent.com/74433356/123088320-a23a8a00-d436-11eb-9dd6-b9b55674790f.png" width="340" height="650"> 
 </p>
 
